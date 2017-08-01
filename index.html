@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html ng-app="App">
+  <head>
+    <title>ACTYS Expertise Java Web - actys.biz</title>
+	<meta charset="UTF-8">
+    <meta name="copyright" content="actys.biz" />
+    <meta name="description" content="Yann Danthu, consultant Java freelance." />
+    <meta name="Author" content="Yann Danthu, actys.biz" />
+	<!-- <meta name="viewport" content="width=device-width" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="keywords" content="ACTYS, consultant java, freelance, contractor, expertise java, web, java, J2EE, Java EE, JEE, architecture, consulting, SOA, SSII, Nantes" />
+	<link rel="stylesheet" type="text/css" href="css/main.css" lang="fr-FR"/>
+	<link rel="stylesheet" type="text/css" href="css/menu-lang.css" lang="fr-FR"/>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  </head>
+  <body ng-controller="GetCountry">
+
+	<header role="banner">
+		<div class="menu-lang" ng-switch="country">
+          <div ng-switch-when="en" ng-click="SetCountry('fr')">
+              <a class="menu-item"><img class="menu-fr" id="fr" src="images/circle-fr.png" alt="français" /></a>
+          </div>
+          <div ng-switch-when="fr" ng-click="SetCountry('en')">
+              <a class="menu-item"><img class="menu-en" id="en" src="images/circle-us.png" alt="english" /></a>
+          </div>
+      <!--ul class="menu-lang" ng-switch="country">
+          <li ng-switch-when="en"
+              ng-class="{'item-lang-active': country === 'fr'}"
+              ng-click="country = 'fr'">
+              <a class="menu-item"><img class="menu-fr" id="fr" src="images/circle-fr.png" alt="français" /><span class="tooltip">fr</span></a>
+          </li>
+          <li ng-switch-when="fr"
+              ng-class="{'item-lang-active': country === 'en'}"
+              ng-click="country = 'en'">
+              <a class="menu-item"><img class="menu-en" id="en" src="images/circle-us.png" alt="english" /><span class="tooltip">en</span></a>
+          </li>
+      </ul-->
+		</div>
+		<img class="logo" src="images/logo-actys-flat.png" alt="ACTYS" />
+    <div class="subtitle">{{mydata.subtitle}}</div>
+	</header>
+
+	<div id="content" class="wrapper">
+
+    <div class="expertise">
+      <div>
+	      <article>
+          <h1>{{mydata.overview.title}}</h1>
+		      <p>{{mydata.overview.content}}</p>
+	      </article>
+	    </div>
+	  </div>
+
+    <div id="services"  class="columns two-columns" >
+      <h1 class="actys-grey">{{mydata.services.title}}</h1>
+      <div clas="row">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <i class="fa fa-group fa-3x actys-orange"></i><h2>{{mydata.services.consulting.title}}</h2><span>{{mydata.services.consulting.content}}</span>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <i class="fa fa-graduation-cap fa-3x actys-orange"></i><h2>{{mydata.services.training.title}}</h2><span>{{mydata.services.training.content}}</span>
+        </div>
+      </div>
+    </div>
+
+    <div id="technology" class="columns four-columns">
+      <h1 class="actys-grey">{{mydata.technology.title}}</h1>
+      <div clas="row">
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <h2><i class="fa fa-coffee fa-lg actys-orange"></i> {{mydata.technology.java.title}}</h2><div>{{mydata.technology.java.content}}</div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <h2><i class="fa fa-gears fa-lg actys-orange"></i> {{mydata.technology.framework.title}}</h2><div>{{mydata.technology.framework.content}}</div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <h2><i class="fa fa-code fa-lg actys-orange"></i> {{mydata.technology.web.title}}</h2><div>{{mydata.technology.web.content}}</div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <h2><i class="fa fa-database fa-lg actys-orange"></i> {{mydata.technology.db.title}}</h2><div>{{mydata.technology.db.content}}</div>
+        </div>
+     </div>
+    </div>
+	</div>
+
+	<footer role="footer">
+		<div>
+			<ul class="menu">
+				<li><a class="menu-item" href="#"><img class="menu-email" id="mail" src="images/email-empty.png" alt="contact" onClick="javascript:contact()" /><span class="tooltip">contact</span></a></li>
+			</ul>
+		</div>
+    <div class="identity">&copy;2004-2014 - <a href="http://actys.biz">actys.biz</a> - Nantes</div>
+    </footer>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.3/angular.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script>
+  var App = angular.module('App', []);
+
+  App.controller('GetCountry', function($scope, $http) {
+      //$scope.mydata = {"test": "testing1"};
+
+      $http.get('data.json').
+        then(function(res){
+          $scope.sitedata = res.data;
+          $scope.mydata = $scope.sitedata.fr;
+      });
+
+      $http.get('http://ipinfo.io/json').
+          success(function(data) {
+              $scope.location = data;
+              $scope.country = 'fr';
+              if (data.country != 'FR') $scope.country = "en";
+          });
+
+      $scope.$watch('country', function(newValue, oldValue) {
+          if (newValue == 'fr')
+           $scope.mydata = $scope.sitedata.fr;
+          else if (newValue == 'en')
+           $scope.mydata = $scope.sitedata.en;
+         });
+
+      $scope.SetCountry = function(lang) {
+        $scope.country = lang;
+      }
+  });
+
+  function contact() {
+    window.location='mailto:contact@actys.biz';
+  }
+</script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-50478688-1', 'actys.biz');
+ga('send', 'pageview');
+</script>
+
+  </body>
+</html>

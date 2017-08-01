@@ -1,0 +1,49 @@
+/* specific menu for language choice */
+.menu-lang {
+	position: static;
+	//padding: 0px 0px 0px 0px;
+	float: none;
+	clear:none;
+	//width: 100%;
+	//height:32px;
+	//line-height: 32px;
+	list-style: none;
+	text-align: right;
+	//top: 0px;
+	margin-top: 0;
+}
+
+.menu-lang li {
+	display:inline;
+	margin: 0px;
+	padding: 0px;
+	list-style-type:none;
+	//border: 1px solid green;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.menu-lang img {
+	//top: -1px;
+  //  filter: grayscale(100%);
+  //  -webkit-filter: grayscale(100%);  /* For Webkit browsers */
+  //  filter: gray;  /* For IE 6 - 9 */
+  //  -webkit-transition: all .3s ease;  /* Transition for Webkit browsers */
+}
+
+.menu-lang .menu-item, .menu-lang .menu-item img {
+	width:32px;
+	height:32px;
+}
+
+.item-lang-active a {
+	background-color: white;
+	//box-shadow: rgba(0,0,0,0.15) 0 0 0 3px;
+	//box-shadow: rgba(251,113,12,1) 0 0 0 2px;
+}
+
+.item-lang-active img, .menu-lang .menu-item img:hover{
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
+    filter: none;
+}

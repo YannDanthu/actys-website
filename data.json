@@ -1,0 +1,93 @@
+{
+  "fr":  {
+    "subtitle": "Un indépendant à votre service.",
+    "overview": {
+      "title": "Un indépendant à votre service.",
+      "content": "Depuis 2004, ACTYS, spécialisé dans les architectures Java EE, accompagne et aide ses clients dans le développement et la maintenance de leurs systèmes d'information."
+    },
+    "services": {
+      "title": "Domaines d'intervention",
+      "training": {
+        "title": "Formation",
+        "content": "Maîtriser les bases et concepts du langage Java."
+      },
+      "consulting": {
+        "title": "Assistance technique",
+        "content": "intégration au sein de vos équipes pour répondre à un besoin ponctuel, étoffer une équipe ou bien pour une demande d'expertise."
+      }
+    },
+    "technology": {
+      "title": "Technologies",
+      "java": {
+        "title": "Java",
+        "content": "Maitrise de l'environement Java Entreprise, de ses composants web (jsp, servlet), de ses services d'infrastructure (JDBC, JNDI) et de communication (JMS, MDB). Mais également des applications client/serveur Java Swing."
+      },
+      "db": {
+        "title": "Base de données",
+        "content": "Connaissance du language SQL, car Hibernate ne doit pas nous faire oublier les fondamentaux. Les bases noSQL ne sont pas en reste, notamment avec une montée en compétence sur MongoDB."
+      },
+      "framework": {
+        "title": "Framework",
+        "content": "Accroitre la productivité et la maintenance par l'utilisation de framework ORM tel que Hibernate, pluridisciplinaire comme Spring, ou spécifique frontend avec AngularJS. Maitrise également des framework XML."
+      },
+      "web": {
+        "title": "Frontend Web",
+        "content": "La passion du design se retranscrit par la conception d`interfaces au service des utilisateurs. Ceci passe par un apprentissage continue des bonnes pratiques de HTML5, CSS3, Javascript, AngularJS."
+      },
+      "webservice": {
+        "title": "WebService",
+        "content": "SOAP, REST."
+      },
+      "xml": {
+        "title": "XML",
+        "content": "Castor, JiBX, WSDL, XSD"
+      }
+    }
+  },
+  "en":  {
+    "subtitle": "A professional at your service.",
+    "overview": {
+      "title": "An independent professional at your service.",
+      "content": "Since 2004, ACTYS, specialized in Java EE architecture, successfully accompany and support its clients in their software development."
+    },
+    "services": {
+      "title": "Expertise",
+      "training": {
+        "title": "Training",
+        "content": "Master the basics and concepts of Java language."
+      },
+      "consulting": {
+        "title": "Consulting",
+        "content": "integration within your teams to meet a specific need, fill out a team or for an expertise."
+      }
+    },
+    "technology": {
+      "title": "Technologies",
+      "java": {
+        "title": "Java",
+        "content": "Master of Enterprise Java environment, its web components (JSP, Servlet), its infrastructure services (JDBC, JNDI) and communication (JMS MDB). But also client / server Java Swing applications."
+      },
+      "db": {
+        "title": "Database",
+        "content": "Knowledge of SQL language, because Hibernate must not make us forget the fundamentals. The NoSQL databases are not left out, especially with a growing competence on MongoDB."
+      },
+      "framework": {
+        "title": "Framework",
+        "content": "Increase productivity and maintenance through the use of ORM framework such as Hibernate, multidisciplinary like Spring, frontend specific with AngularJS. Also mastering the XML framworks."
+      },
+      "web": {
+        "title": "Web",
+        "content": "Passion for design is transcribed by designing user oriented interfaces with UX design in mind. This requires a continuous learning of best practices for HTML5, CSS3, Javascript, AngularJS, ..."
+      },
+      "webservice": {
+        "title": "WebService",
+        "content": "SOAP, REST."
+      },
+      "xml": {
+        "title": "XML",
+        "content": "Castor, JiBX, WSDL, XSD"
+      }
+    }
+  }
+
+}
