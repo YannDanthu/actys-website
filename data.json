@@ -1,9 +1,9 @@
 {
   "fr":  {
-    "subtitle": "Un indépendant à votre service.",
+    "subtitle": "Depuis 2004, ACTYS fournit son expertise aux petites et grandes entreprises pour créer de fantastiques applications.",
     "overview": {
       "title": "Un indépendant à votre service.",
-      "content": "Depuis 2004, ACTYS, spécialisé dans les architectures Java EE, accompagne et aide ses clients dans le développement et la maintenance de leurs systèmes d'information."
+      "content": "Depuis 2004, ACTYS fournit son expertise aux petites et grandes entreprises pour créer de fantastiques applications."
     },
     "services": {
       "title": "Domaines d'intervention",
@@ -45,10 +45,10 @@
     }
   },
   "en":  {
-    "subtitle": "A professional at your service.",
+    "subtitle": "Since 2004, ACTYS provides its expertise to big and small companies to make great software.",
     "overview": {
       "title": "An independent professional at your service.",
-      "content": "Since 2004, ACTYS, specialized in Java EE architecture, successfully accompany and support its clients in their software development."
+      "content": "Since 2004, ACTYS provides its expertise to big and small companies to make great software."
     },
     "services": {
       "title": "Expertise",
