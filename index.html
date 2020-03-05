@@ -17,7 +17,7 @@
 
   	<link rel="stylesheet" type="text/css" href="/css/main.css" lang="fr-FR"/>
   	<link rel="stylesheet" type="text/css" href="/css/menu-lang.css" lang="fr-FR"/>
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- Optional theme -->
@@ -30,84 +30,14 @@
   <body ng-controller="GetCountry">
 
 	<div class="container" style="text-align: -webkit-center;">
-		<!-- <div class="menu-lang container" ng-switch="country">
-          <div ng-switch-when="en" ng-click="SetCountry('fr')">
-              <a class="menu-item"><img class="menu-fr" id="fr" src="images/circle-fr.png" alt="français" /></a>
-          </div>
-          <div ng-switch-when="fr" ng-click="SetCountry('en')">
-              <a class="menu-item"><img class="menu-en" id="en" src="images/circle-us.png" alt="english" /></a>
-          </div>
-      ul class="menu-lang" ng-switch="country">
-          <li ng-switch-when="en"
-              ng-class="{'item-lang-active': country === 'fr'}"
-              ng-click="country = 'fr'">
-              <a class="menu-item"><img class="menu-fr" id="fr" src="images/circle-fr.png" alt="français" /><span class="tooltip">fr</span></a>
-          </li>
-          <li ng-switch-when="fr"
-              ng-class="{'item-lang-active': country === 'en'}"
-              ng-click="country = 'en'">
-              <a class="menu-item"><img class="menu-en" id="en" src="images/circle-us.png" alt="english" /><span class="tooltip">en</span></a>
-          </li>
-      </ul
-		</div> -->
+
 		<img class="logo img-responsive" src="images/logo-actys-flat.png" alt="ACTYS" />
     <div class="subtitle" style="margin-top: 30px; max-width: 397px; text-align: justify">{{mydata.subtitle}}</div>
 	</div>
 
-	<!-- <div id="content" class="wrapper"> -->
-
-    <!-- <div class="expertise">
-      <div>
-	      <article>
-          <h1>{{mydata.overview.title}}</h1>
-		      <p>{{mydata.overview.content}}</p>
-	      </article>
-	    </div>
-	  </div> -->
-<!--
-    <div id="services"  class="columns two-columns" >
-      <h1 class="actys-grey">{{mydata.services.title}}</h1>
-      <div clas="row">
-        <div class="col-xs-12 col-sm-6 col-md-6">
-          <i class="fa fa-group fa-3x actys-orange"></i><h2>{{mydata.services.consulting.title}}</h2><span>{{mydata.services.consulting.content}}</span>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-6">
-          <i class="fa fa-graduation-cap fa-3x actys-orange"></i><h2>{{mydata.services.training.title}}</h2><span>{{mydata.services.training.content}}</span>
-        </div>
-      </div>
-    </div>
-
-    <div id="technology" class="columns four-columns">
-      <h1 class="actys-grey">{{mydata.technology.title}}</h1>
-      <div clas="row">
-        <div class="col-xs-12 col-sm-6 col-md-3">
-          <h2><i class="fa fa-coffee fa-lg actys-orange"></i> {{mydata.technology.java.title}}</h2><div>{{mydata.technology.java.content}}</div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-3">
-          <h2><i class="fa fa-gears fa-lg actys-orange"></i> {{mydata.technology.framework.title}}</h2><div>{{mydata.technology.framework.content}}</div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-3">
-          <h2><i class="fa fa-code fa-lg actys-orange"></i> {{mydata.technology.web.title}}</h2><div>{{mydata.technology.web.content}}</div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-3">
-          <h2><i class="fa fa-database fa-lg actys-orange"></i> {{mydata.technology.db.title}}</h2><div>{{mydata.technology.db.content}}</div>
-        </div>
-     </div>
-    </div>
-	</div> -->
-
-	<!-- <footer role="footer">
-		<div>
-			<ul class="menu">
-				<li><a class="menu-item" href="#"><img class="menu-email" id="mail" src="images/email-empty.png" alt="contact" onClick="javascript:contact()" /><span class="tooltip">contact</span></a></li>
-			</ul>
-		</div>
-    <div class="identity">&copy;2004-2014 - <a href="http://actys.biz">actys.biz</a> - Nantes</div>
-    </footer> -->
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.3/angular.min.js"></script>
-<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script> -->
 <script>
   var App = angular.module('App', []);
 
